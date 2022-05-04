@@ -43,6 +43,11 @@ main section .digit{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.digit:hover{
+    background: hsl(25, 97%, 53%);
+    color: #ffffff;
 }
 main #submit{
     width: 100%;
@@ -53,6 +58,11 @@ main #submit{
     text-transform: uppercase;
     color: white;
     border-radius: 1.5rem;
+    cursor: pointer;
+}
+#submit:hover{
+    background: #ffffff;
+    color: hsl(25, 97%, 53%);
 }
 .secondContainer{
     display: flex;
