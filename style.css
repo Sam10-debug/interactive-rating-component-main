@@ -50,7 +50,7 @@ main section .digit{
     color: #ffffff;
 }
 main #submit{
-    width: 99%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
