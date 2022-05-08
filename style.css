@@ -50,7 +50,7 @@ main section .digit{
     color: #ffffff;
 }
 main #submit{
-    width: 10%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,4 +96,62 @@ main #submit{
 }
 .hidden{
     display: none;
+}
+@media (min-width:800px){
+    body{
+        padding: 0 3rem;
+    }
+    main{
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 60%;
+        height: 520px;
+    }
+    main h1{
+        font-size: 3rem;
+    }
+    main p{
+        font-size: 1.5rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    main section{
+        height: 80px;
+        margin-bottom: 3rem;
+    }
+    main section .digit{
+        height: 80px;
+        width:80px;
+    }
+    main #submit{
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        border-radius: 1.7rem;
+    }
+    #submit:hover{
+        background: #ffffff;
+        color: hsl(25, 97%, 53%);
+    }
+    main img{
+        width: 50px;
+    }
+    .secondContainer{
+        padding: 1.5rem;
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 60%;
+        height: 520px;
+    }
+    .secondContainer section{
+        margin: 2rem 0;
+        width: 65%;
+        height: 50px;
+        border-radius: 1rem;
+    }
+    .secondContainer h2{
+        font-size: 2.5rem;
+    }
+    .secondContainer p{
+        line-height: 1.7;
+    }
 }

@@ -11,25 +11,28 @@ const dom=document.querySelector('#dom')
 const func=()=>{
     main.classList.add("hidden")
     secondContainer.classList.toggle("hidden")
+    
 }
 submit.addEventListener("click",func)
-const firstCheck=()=>{
-    dom.innerText=`You selected ${digits[0].innerText} out of 5`
+let arr=0
+const check=(click)=>{
+    if(click.target.classList.contains("first")){
+        dom.innerText="You selected 1 out of 5"
+        arr+=1
+    }else if(click.target.classList.contains("second")){
+        dom.innerText="You selected 2 out of 5"
+        arr+=1
+    }else if(click.target.classList.contains("third")){
+        dom.innerText="You selected 3 out of 5"
+        arr+=1
+    }else if(click.target.classList.contains("fourth")){
+        dom.innerText="You selected 4 out of 5"
+        arr+=1
+    }else if(click.target.classList.contains("fifth")){
+        dom.innerText="You selected 5 out of 5"
+        arr+=1
+    }else if(arr===0){
+        secondContainer.classList.add("hidden")
+    }
 }
-firstDigit.addEventListener("click",firstCheck)
-const secondCheck=()=>{
-    dom.innerText=`You selected ${digits[1].innerText} out of 5`
-}
-secondDigit.addEventListener("click",secondCheck)
-const thirdCheck=()=>{
-    dom.innerText=`You selected ${digits[2].innerText} out of 5`
-}
-thirdDigit.addEventListener("click",thirdCheck)
-const fourthCheck=()=>{
-    dom.innerText=`You selected ${digits[3].innerText} out of 5`
-}
-fourthDigit.addEventListener("click",fourthCheck)
-const fifthCheck=()=>{
-    dom.innerText=`You selected ${digits[4].innerText} out of 5`
-}
-fifthDigit.addEventListener("click",fifthCheck)
+Array.from(digits).forEach(element=>element.addEventListener("click",check))
